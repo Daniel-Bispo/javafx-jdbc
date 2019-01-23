@@ -18,7 +18,12 @@ public class DepartmentService {
 		if(obj.getId() == null) {
 			dao.insert(obj);
 		}
-		else
+		else {
 			dao.update(obj);
+		}			
+	}
+	
+	public void remove(Department obj) {
+		dao.deletById(obj.getId());
 	}
 }
